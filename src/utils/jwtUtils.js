@@ -11,9 +11,9 @@ class JWTUtils {
     );
   }
 
-  verifyToken(token) {
+  verifyRefreshToken(token) {
     try {
-      return jwt.verify(token, process.env.JWT_SECRET);
+      return jwt.verify(token, process.env.REFRESH_TOKEN_SECRET);
     } catch (error) {
       return null;
     }

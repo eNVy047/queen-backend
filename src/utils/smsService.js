@@ -47,16 +47,6 @@ class SMSService {
   // }
 }
 
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
-console.log(accountSid)
-console.log(authToken)
-console.log(process.env.EMAIL_HOST)
-
-if (!accountSid || !authToken) {
-  throw new Error("Twilio credentials not found in environment variables.");
-}
-
 
 const smsService = new SMSService();
 export default smsService;
